@@ -1,0 +1,4 @@
+#include "../nsh/defconfig"
+
+CONFIG_DEBUG_FEATURES=y
+CONFIG_DEBUG_ASSERTIONS=y

@@ -182,6 +182,9 @@ src_config=${configpath}/defconfig
 dest_config="${TOPDIR}/.config"
 backup_config="${TOPDIR}/defconfig"
 
+inherit_script="${TOPDIR}/tools/defconfig_inheritance.sh"
+src_config=$(${inherit_script} ${src_config})
+
 if [ ! -r ${src_config} ]; then
   echo "File ${src_config} does not exist"
   exit 5
